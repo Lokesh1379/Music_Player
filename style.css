@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(196, 74, 137), rgb(226, 194, 194), rgb(235, 154, 211));
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    position: absolute;
+    top: 20px;
+    width: 500px;
+    height: 500px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+audio {
+    width: 100vw;
+    position: absolute;
+    bottom: 10px;
+}
+
+audio::-webkit-media-controls-panel {
+
+    background: linear-gradient(90deg, rgb(196, 74, 137), rgb(226, 194, 194), rgb(235, 154, 211));
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: white;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-timeline {
+    color: red;
+}
+
+#outer-circle {
+    width: 18em;
+    height: 18em;
+    background: linear-gradient(200deg, black, rgb(67, 66, 66), black);
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 5s linear infinite;
+    margin-top: 5em;
+    box-shadow: 0 0 15px white;
+}
+
+#inner-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 10px solid rgb(182, 177, 177);
+    background: linear-gradient(pink);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
